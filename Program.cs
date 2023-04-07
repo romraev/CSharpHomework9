@@ -14,3 +14,21 @@ int num = Convert.ToInt32(Console.ReadLine());
 
 Numbers(num);
 */
+
+// Task 66: Задайте значения M и N. 
+// Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+
+int sum = 0;
+int Sum(int M, int N)
+{
+    if(M>N) sum = N + Sum(M, N+1); 
+    else if (N>M) sum = M + Sum(M+1, N);
+    return sum;
+}
+
+Console.Write("Введите целое число M: ");
+int M = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите целое число N: ");
+int N = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Сумма целых чисел между M и N равна: " + Sum(M, N));
