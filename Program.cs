@@ -44,9 +44,9 @@ int Ackermann(int m, int n)
     else return Ackermann(m-1, Ackermann(m, n-1));
 }
 
-Console.Write("Введите целое число M: ");
+Console.Write("Введите натуральное число M: ");
 int M = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите целое число N: ");
+Console.Write("Введите натуральное число N: ");
 int N = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine($"Результат вычисления функции Aккермана для чисел {M} и {N} равен: {Ackermann(M,N)}");
