@@ -33,3 +33,20 @@ int N = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Сумма целых чисел между M и N равна: " + (Sum(M, N)-M)); // Наверное не очень правильно, зато кратко и работает))
 */
+
+// Task 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. 
+// Даны два неотрицательных числа m и n.
+
+int Ackermann(int m, int n)
+{
+    if (m == 0) return n+1;
+    else if (n == 0) return Ackermann(m-1,1);
+    else return Ackermann(m-1, Ackermann(m, n-1));
+}
+
+Console.Write("Введите целое число M: ");
+int M = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите целое число N: ");
+int N = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine($"Результат вычисления функции Aккермана для чисел {M} и {N} равен: {Ackermann(M,N)}");
